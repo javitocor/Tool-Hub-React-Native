@@ -2,8 +2,9 @@ import {
   GET_SINGLE_DATE, GET_SINGLE_DATE_PENDING, GET_SINGLE_DATE_ERROR,
 } from '../constants/constants';
 
-export const getSingleDate = results => ({
+export const getSingleDate = (results) => ({
   type: GET_SINGLE_DATE,
+  day: results.date,
   events: results.data.Events,
   deaths: results.data.Deaths,
   births: results.data.Births,

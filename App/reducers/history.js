@@ -9,6 +9,7 @@ const historyReducer = (state = initialStateHistory, action) => {
       return {
         ...state,
         pending: false,
+        day: action.day,
         events: action.events,
         deaths: action.deaths,
         births: action.births,
