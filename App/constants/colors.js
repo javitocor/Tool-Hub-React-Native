@@ -2,7 +2,7 @@ export default {
   white: 'white',
   border: '#E2E2E2',
   text: '#343434',
-  blue: 'blue',
+  blue: '#4744C7',
   textLight: '#797979',
   offWhite: '#F0F0F0',
   black: 'black',
@@ -12,5 +12,5 @@ export default {
   green: 'green',
   pink: 'pink',
   purple: 'purple',
-  red: 'red',
+  red: '#BA1E51',
 };
