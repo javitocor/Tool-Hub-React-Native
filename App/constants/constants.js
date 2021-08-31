@@ -43,3 +43,5 @@ export const MONTHS = [{label:'January', value:'1'}, {label:'February', value:'2
 export const INFO = [{label:'All', value:'All'}, {label:'Events', value:'Events'}, {label:'Births', value:'Births'}, {label:'Deaths', value:'Deaths'},];
 
 export const RESOURCES = [{label:'Definitions', value:'definitions'}, {label:'Synonyms', value:'synonims'}, {label:'Antonyms', value:'antonyms'}];
+
+export const CATEGORY = [{label:'business', value:'Business'}, {label:'Entertainment', value:'entertainment'}, {label:'General', value:'general'}, {label:'Health', value:'health'}, {label:'Science', value:'science'}, {label:'Sports', value:'sports'}, {label:'Technology', value:'technology'}, ]

@@ -65,7 +65,7 @@ const WordDetail = (props) => {
             <View style={styles.content}>
               <FlatList 
                 data={data}
-                renderItem={({ item }) => (<WordDisplay item={item} onButtonPress={()=>null} />)}
+                renderItem={({ item }) => (<WordDisplay item={item} />)}
                 keyExtractor={item => generateKey(item)}
                 ListHeaderComponent={<HeaderList category={resource} />}
                 ItemSeparatorComponent={() => <RowSeparator />}

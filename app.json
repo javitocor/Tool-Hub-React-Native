@@ -10,6 +10,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    
+    "extra": {
+      "APIKEY": "2c94caad053343f2b7853e877014edbe"        
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
