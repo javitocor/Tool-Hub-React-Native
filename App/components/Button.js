@@ -8,17 +8,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.yellow,
-    borderColor: colors.blue,
+    backgroundColor: colors.grey,
+    borderColor: colors.white,
     borderWidth: 2, 
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 15,
+    marginBottom: 10,
   },
   buttonText: {
     fontWeight: 'bold',
     fontSize: 16,
-    color: colors.green,
+    color: colors.white,
   },
 });
 
