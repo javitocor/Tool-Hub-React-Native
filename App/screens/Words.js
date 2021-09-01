@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     width: '100%',
     height: 65,
-    borderColor: colors.white,
+    borderColor: colors.red,
     borderWidth: 2, 
     borderRadius: 5,
     backgroundColor: colors.grey,
@@ -75,19 +75,19 @@ const styles = StyleSheet.create({
   },
   headerText:{
     fontSize: 22, 
-    color: colors.white,
+    color: colors.red,
     fontWeight: 'bold',
     textDecorationLine: 'underline',
-    textDecorationColor: colors.white,
+    textDecorationColor: colors.red,
   },
   inputText: {
     width: '100%',
     height: 60,
     borderWidth: 2,
-    borderColor: colors.white, 
+    borderColor: colors.red, 
     borderRadius: 5,
     paddingHorizontal: 10,
-    color: colors.white,
+    color: colors.red,
   },
   image: {
     width: screen.width * 0.90,
@@ -100,7 +100,7 @@ const Words = (props) => {
   const [scrollEnabled, setScrollEnabled] = useState(false);
   const [resource, setResource] = useState('');
   const [word, setWord] = useState('');
-
+  
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={colors.grey} />
@@ -116,8 +116,8 @@ const Words = (props) => {
                 onChangeText={(value) => { setResource(value) }}
                 fontSize={16}
                 labelFontSize={12}
-                baseColor={colors.white}
-                textColor={colors.white}
+                baseColor={colors.red}
+                textColor={colors.red}
                 selectedItemColor={colors.grey}
                 containerStyle={styles.dropdownStyle}
                 value="Definitions"
@@ -127,7 +127,7 @@ const Words = (props) => {
               <TextInput 
                 style={styles.inputText}
                 placeholder="Type the word here!"
-                placeholderTextColor={colors.white}
+                placeholderTextColor={colors.red}
                 placeholderStyle={{ fontWeight: 'bold' }}
                 onChangeText={text => setWord(text)}
               />

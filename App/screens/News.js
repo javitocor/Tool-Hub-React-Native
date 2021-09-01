@@ -6,7 +6,6 @@ import {
   Dimensions,
   TextInput,
   ScrollView,
-  Text,
   Image
 } from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     width: '100%',
     height: 65,
-    borderColor: colors.white,
+    borderColor: colors.green,
     borderWidth: 2, 
     borderRadius: 5,
     backgroundColor: colors.grey,
@@ -75,19 +74,19 @@ const styles = StyleSheet.create({
   },
   headerText:{
     fontSize: 22, 
-    color: colors.white,
+    color: colors.green,
     fontWeight: 'bold',
     textDecorationLine: 'underline',
-    textDecorationColor: colors.white,
+    textDecorationColor: colors.green,
   },
   inputText: {
     width: '100%',
     height: 60,
     borderWidth: 2,
-    borderColor: colors.white, 
+    borderColor: colors.green, 
     borderRadius: 5,
     paddingHorizontal: 10,
-    color: colors.white,
+    color: colors.green,
   },
   image: {
     width: screen.width * 0.90,
@@ -98,17 +97,15 @@ const styles = StyleSheet.create({
 const News = (props) => {
   const {navigation} = props;
   const [scrollEnabled, setScrollEnabled] = useState(false);
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Business');
   const [param, setParam] = useState('');
-
-
+  
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={colors.grey} />
       <ScrollView scrollEnabled={scrollEnabled}>
         <View style={styles.content}>
           <Image source={require('../assets/images/logoheadlines.png')} resizeMode='cover' style={styles.image} />
-          <Text style={styles.headerText}>Top-Headlines News</Text>
           <View style={styles.top}>
             <View style={styles.months}>
               <Dropdown 
@@ -117,8 +114,8 @@ const News = (props) => {
                 onChangeText={(value) => { setCategory(value) }}
                 fontSize={16}
                 labelFontSize={12}
-                baseColor={colors.white}
-                textColor={colors.white}
+                baseColor={colors.green}
+                textColor={colors.green}
                 selectedItemColor={colors.grey}
                 containerStyle={styles.dropdownStyle}
                 value="Business"
@@ -128,7 +125,7 @@ const News = (props) => {
               <TextInput 
                 style={styles.inputText}
                 placeholder="Type the Keyword!"
-                placeholderTextColor={colors.white}
+                placeholderTextColor={colors.green}
                 placeholderStyle={{ fontWeight: 'bold' }}
                 onChangeText={text => setParam(text)}
               />

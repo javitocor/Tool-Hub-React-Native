@@ -1,4 +1,4 @@
-export const BASE_URL_WORDS = 'https://wordsapiv1.p.mashape.com/words/';
+export const BASE_URL_WORDS = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 export const BASE_URL_HISTORY = 'http://history.muffinlabs.com/date/';
 export const BASE_URL_NEWS = 'https://newsapi.org/v2/top-headlines?';
 
@@ -42,6 +42,6 @@ export const GET_NEWS_ERROR = 'GET_NEWS_ERROR';
 export const MONTHS = [{label:'January', value:'1'}, {label:'February', value:'2'}, {label:'March', value:'3'}, {label:'April', value:'4'}, {label:'May', value:'5'}, {label:'June', value:'6'}, {label:'July', value:'7'}, {label:'August', value:'8'}, {label:'September', value:'9'}, {label:'October', value:'10'}, {label:'November', value:'11'}, {label:'December', value:'12'}]
 export const INFO = [{label:'All', value:'All'}, {label:'Events', value:'Events'}, {label:'Births', value:'Births'}, {label:'Deaths', value:'Deaths'},];
 
-export const RESOURCES = [{label:'Definitions', value:'definitions'}, {label:'Synonyms', value:'synonims'}, {label:'Antonyms', value:'antonyms'}];
+export const RESOURCES = [{label:'Definitions', value:'definitions'}, {label:'Synonyms', value:'synonyms'}, {label:'Antonyms', value:'antonyms'}];
 
 export const CATEGORY = [{label:'business', value:'Business'}, {label:'Entertainment', value:'entertainment'}, {label:'General', value:'general'}, {label:'Health', value:'health'}, {label:'Science', value:'science'}, {label:'Sports', value:'sports'}, {label:'Technology', value:'technology'}, ]

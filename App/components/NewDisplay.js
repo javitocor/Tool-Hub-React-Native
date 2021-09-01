@@ -60,7 +60,7 @@ const NewDisplay = ({ item, onButtonPress }) => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={onButtonPress} activeOpacity={0.9}>
         <View style={styles.top}>
-          <Image source={{uri:item.urlToImage}} resizeMode="contain" style={styles.image} />
+          <Image source={{uri:item.urlToImage}} resizeMode="cover" style={styles.image} />
         </View>
         <View style={styles.middle}>
           <Text style={styles.textMiddle}>{item.title}</Text>

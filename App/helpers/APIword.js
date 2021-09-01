@@ -8,15 +8,17 @@ const wordCall = (resource, word) => async dispatch => {
 
   try {
     dispatch(fromwords.getSingleWordPending());
-
-    const response = await fetch(`${Url}/${word}/${resource}`, { mode: 'cors'});
+    
+    const response = await fetch(`${Url}${word}`, {mode:'cors'  })
+    
     const data = await response.json();
-
+    
     dispatch(fromwords.getSingleWord(word, data));
-
+    
     return data;
 
   } catch(error){
+    console.log(error)
     dispatch(fromwords.getSingleWordError(error));
   };
 };

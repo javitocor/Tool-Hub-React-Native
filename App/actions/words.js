@@ -5,7 +5,7 @@ import {
 export const getSingleWord = (word, data) => ({
   type: GET_SINGLE_WORD,
   word,
-  definitions: data.definitions,
+  definitions: data[0].meanings,
   synonyms: data.synonyms,
   antonyms: data.antonyms,
 });

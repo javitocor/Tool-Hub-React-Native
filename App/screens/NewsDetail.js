@@ -13,7 +13,7 @@ import {
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import newsCall from '../helpers/APIword';
+import newsCall from '../helpers/APInews';
 import generateKey from '../helpers/generateKey';
 import HeaderList from '../components/HeaderList';
 import RowSeparator from '../components/RowSeparator';
@@ -43,26 +43,24 @@ const NewsDetail = (props) => {
   const {getNews, route} = props;
   const {category, param} = route.params;
   const [isPending, setIsPending] = useState(true);
-  const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     (async () => {
       try {
         setIsPending(true);
-        const info = await getNews(category, param);
-        await setData(info);
+        await getNews(category, param);
         setIsPending(false);
       } catch (error) {
         console.log(error)
       }           
     })();  
-  },[]);
+  },[param]);
 
   const openLink = (url) =>
   Linking.openURL(url).catch(() =>
     Alert.alert('Sorry, something went wrong.', 'Please try again later.')
-  );
-
+  );  
+  
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={colors.grey} />
@@ -71,7 +69,7 @@ const NewsDetail = (props) => {
           ):(
             <View style={styles.content}>
               <FlatList 
-                data={data}
+                data={props.news.articles}
                 renderItem={({ item }) => (<NewDisplay item={item} onButtonPress={()=>openLink(item.url)} />)}
                 keyExtractor={item => generateKey(item)}
                 ListHeaderComponent={<HeaderList category={`${category}-${param}`} />}

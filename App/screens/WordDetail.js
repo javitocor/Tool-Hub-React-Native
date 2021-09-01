@@ -42,20 +42,20 @@ const WordDetail = (props) => {
   const {resource, word} = route.params;
   const [isPending, setIsPending] = useState(true);
   const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     (async () => {
       try {
         setIsPending(true);
         await getWord(resource, word);
-        await setData(props.words[resource]);
+        await setData(props.words.definitions);
         setIsPending(false);
       } catch (error) {
         console.log(error)
       }           
     })();  
   },[]);
-
+  console.log(props.words.definitions)
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={colors.grey} />
@@ -67,7 +67,7 @@ const WordDetail = (props) => {
                 data={data}
                 renderItem={({ item }) => (<WordDisplay item={item} />)}
                 keyExtractor={item => generateKey(item)}
-                ListHeaderComponent={<HeaderList category={resource} />}
+                ListHeaderComponent={<HeaderList category={`${resource  } of ${  word}`} />}
                 ItemSeparatorComponent={() => <RowSeparator />}
               />
             </View>

@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     width: '100%',
     height: 65,
-    borderColor: colors.white,
+    borderColor: colors.blue,
     borderWidth: 2, 
     borderRadius: 5,
     backgroundColor: colors.grey,
@@ -76,19 +76,19 @@ const styles = StyleSheet.create({
   },
   headerText:{
     fontSize: 22, 
-    color: colors.white,
+    color: colors.blue,
     fontWeight: 'bold',
     textDecorationLine: 'underline',
-    textDecorationColor: colors.white,
+    textDecorationColor: colors.blue,
   },
   inputText: {
     width: '100%',
     height: 60,
     borderWidth: 2,
-    borderColor: colors.white, 
+    borderColor: colors.blue, 
     borderRadius: 5,
     paddingHorizontal: 10,
-    color: colors.white,
+    color: colors.blue,
   },
   image: {
     width: screen.width * 0.90,
@@ -99,9 +99,9 @@ const styles = StyleSheet.create({
 const HistoryHome = (props) => {
   const {navigation} = props;
   const [scrollEnabled, setScrollEnabled] = useState(false);
-  const [month, setMonth] = useState('');
+  const [month, setMonth] = useState('January');
   const [day, setDay] = useState('');
-  const [info, setInfo] = useState('');
+  const [info, setInfo] = useState('Events');
 
   const onSubmit = (days) => {
     if (days > 1 && days <= 31) {
@@ -126,8 +126,8 @@ const HistoryHome = (props) => {
                 onChangeText={(value) => { setMonth(value) }}
                 fontSize={16}
                 labelFontSize={12}
-                baseColor={colors.white}
-                textColor={colors.white}
+                baseColor={colors.blue}
+                textColor={colors.blue}
                 selectedItemColor={colors.grey}
                 containerStyle={styles.dropdownStyle}
                 value="January"
@@ -138,7 +138,7 @@ const HistoryHome = (props) => {
                 style={styles.inputText}
                 keyboardType="numeric"
                 placeholder="Type here the day!"
-                placeholderTextColor={colors.white}
+                placeholderTextColor={colors.blue}
                 placeholderStyle={{ fontWeight: 'bold' }}
                 onChangeText={text => setDay(text)}
               />
@@ -150,8 +150,8 @@ const HistoryHome = (props) => {
                 onChangeText={(value) => { setInfo(value) }}
                 fontSize={16}
                 labelFontSize={12}
-                baseColor={colors.white}
-                textColor={colors.white}
+                baseColor={colors.blue}
+                textColor={colors.blue}
                 selectedItemColor={colors.grey}
                 containerStyle={styles.dropdownStyle}
                 value="All"

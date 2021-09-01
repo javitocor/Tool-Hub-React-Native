@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 const HistoryDisplay = ({item, onButtonPress}) => {
   return (
     <View style={styles.container}>
-      <LinearGradient colors={[colors.white, colors.grey, colors.white]}>
+      <LinearGradient colors={[colors.white, colors.grey, colors.blue]}>
         <TouchableOpacity style={styles.button} onPress={onButtonPress} activeOpacity={0.9}>
           <Text style={styles.text}>{item.links.title ? item.links.title : item.links[0].title}</Text>
           <View style={styles.icon}>

@@ -12,7 +12,8 @@
     },
     
     "extra": {
-      "APIKEY": "2c94caad053343f2b7853e877014edbe"        
+      "APIKEY": "2c94caad053343f2b7853e877014edbe",
+      "APIKEY2": "3b7f22e3f3mshbe8bf592037f47fp1589e7jsnb4ca0d8360d1"   
     },
     "updates": {
       "fallbackToCacheTimeout": 0

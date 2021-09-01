@@ -28,11 +28,10 @@ const styles = StyleSheet.create({
 });
 
 const WordDisplay = ({item}) => {
-
   return (
     <View style={styles.container}>
-      <LinearGradient colors={[colors.white, colors.grey, colors.white]} style={styles.button}>
-        <Text style={styles.text}>{item instanceof String ? item : item.definition}</Text>
+      <LinearGradient colors={[colors.white, colors.grey, colors.red]} style={styles.button}>
+        <Text style={styles.text}>{item.definitions[0].definition}</Text>
       </LinearGradient>
     </View>
   );
