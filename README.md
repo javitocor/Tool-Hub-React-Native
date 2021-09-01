@@ -21,7 +21,7 @@
 
 # Tool Hub - React Native
 
->  A mobile app with a custom drawer and header to use differents tools as a dictionary, latest news feature and where you can know what happen in history in an specefied date. Built with React Native & Redux.
+>  A mobile app with a custom drawer and header to use different tools as a dictionary, latest news feature and where you can know what happens in history on a specified date. Built with React Native & Redux.
 
 Additional description about the project and its features.
 
